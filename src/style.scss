@@ -1,0 +1,38 @@
+/* Variables SCSS */
+@import "scss/variables";
+
+/* Base SCSS */
+@import "scss/base";
+
+/* SCSS INDEX.HTML */
+@import "scss/index";
+
+/* MAIN SCSS */
+@import "scss/main";
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  //border-bottom: rgba(128, 128, 128, 0.25) 1px solid;
+  height: 80px;
+  padding: 0 30px;
+
+  .logo {
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  gap: 32px;
+  padding: 30px 15px;
+}

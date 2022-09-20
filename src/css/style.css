@@ -1,0 +1,191 @@
+/* Variables SCSS */
+/* Base SCSS */
+/* Reset CSS */
+@import url("https://unpkg.com/reset-css@5.0.1/reset.css");
+/* Font Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: content-box;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: inherit;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px 0;
+  text-align: center;
+}
+
+a:visited {
+  color: #2B2C34;
+}
+
+/* SCSS INDEX.HTML */
+section.index {
+  margin: 200px auto;
+  width: 500px;
+  text-align: center;
+}
+section.index .login {
+  margin: auto;
+  width: 350px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.login p {
+  margin-bottom: 20px;
+}
+
+.login .form-group input {
+  width: 100%;
+  margin: auto auto 20px;
+  border: 1px solid #808080;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+.login .form-group *::placeholder {
+  text-align: center;
+  color: #808080;
+  opacity: 50%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn {
+  color: rgba(128, 128, 128, 0.5);
+  background: #F2F2F2;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn .btn:hover {
+  background-color: #FFF;
+  transition: 0.3s;
+}
+
+/* MAIN SCSS */
+main {
+  width: 100%;
+  min-height: 500px;
+}
+main .list-class {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  gap: 32px;
+  padding: 0 15px;
+  font-weight: bold;
+}
+main .list-class a {
+  color: #67568c;
+}
+main .list-class a:hover {
+  color: #333333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+main .title {
+  padding: 5%;
+}
+
+.grid {
+  height: 250px;
+}
+.grid .form-group {
+  margin: auto;
+  width: 50%;
+}
+.grid .form-group input {
+  width: 100%;
+  border: 1px solid #808080;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+.grid .form-name {
+  display: flex;
+  gap: 30px;
+  margin: auto auto 20px;
+}
+.grid .form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 20px;
+}
+.grid .submit input {
+  margin-bottom: 20px;
+}
+.grid input {
+  font-size: 16px;
+}
+.grid input::placeholder {
+  font-size: 16px;
+}
+
+.radio {
+  border: 1px solid #808080;
+  padding: 10px 0;
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+  outline: none;
+  display: flex;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  height: 80px;
+  padding: 0 30px;
+}
+header .logo {
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  gap: 32px;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  gap: 32px;
+  padding: 30px 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

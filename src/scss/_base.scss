@@ -1,0 +1,37 @@
+/* Reset CSS */
+@import url("https://unpkg.com/reset-css@5.0.1/reset.css");
+
+/* Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: content-box;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px 0;
+  text-align: center;
+}
+
+a:visited {
+  color: $base-color;
+}
