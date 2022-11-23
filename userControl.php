@@ -16,6 +16,7 @@ switch ($grant) {
         // include("view/admin.php");
         include("admin.php");
         // include("view/footer.php");
+        break;
         
     case 'secretaire':
         // echo "secretaire";
@@ -24,6 +25,7 @@ switch ($grant) {
         // include("view/secretaire.php");
         include("secretaire.php");
         // include("view/footer.php");
+        break;
 
     case 'evaluateur':
         // echo "evaluateur";
@@ -32,5 +34,5 @@ switch ($grant) {
         // include("view/eval.php");
         include("eval.php");
         // include("view/footer.php");
-
+        break;
 }
