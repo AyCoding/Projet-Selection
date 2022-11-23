@@ -1,26 +1,33 @@
 <?php
-$grant = "admin";
+$grant = "evaluateur";
+// $grant = $_POST['user']
 
-if ($grant == "secretaire") {
-    # code...
-    // inclure les pages pour secrétaire
-    // include("view/header.php")
-    // include("view/body.php")
-    // include("view/footer.php")
-}
+/* EXEMPLE
+$db = new PDO('mysql:host=localhost;dbname=NOM;charset=UTF8;', 'USER', 'MDP');
+$sql = "SELECT * FROM user WHERE user = '$user'; "; // On récupère dans la table "user" tout les user
+*/
 
-if ($grand == "admin") {
-    # code...
-    // inclure les pages pour admin
-    // include("view/header.php")
-    // include("view/body.php")
-    // include("view/footer.php")
-}
+// Programme de vérification de l'utilisateur, pour afficher les pages qu'ils lui sont dédiés.
+switch ($grant) {
+    case 'secretaire':
+        echo "secretaire";
+        // inclure les pages pour secrétaire
+        // include("view/header.php")
+        // include("view/body.php")
+        // include("view/footer.php")
 
-if ($grand == "evaluateur") {
-    # code...
-    // inclure les pages pour évaluateur
-    // include("view/header.php")
-    // include("view/body.php")
-    // include("view/footer.php")
+    case 'admin':
+        echo "admin";
+        // inclure les pages pour admin
+        // include("view/header.php")
+        // include("view/body.php")
+        // include("view/footer.php")
+
+    case 'evaluateur':
+        echo "evaluateur";
+        // inclure les pages pour évaluateur
+        // include("view/header.php")
+        // include("view/body.php")
+        // include("view/footer.php")
+
 }
