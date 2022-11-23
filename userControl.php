@@ -25,35 +25,6 @@ switch ($grant) {
         include("secretaire.php");
         // include("view/footer.php");
 
-    case 'admin':
-        // echo "admin";
-        // inclure les pages pour admin
-        // include("view/header.php");
-        // include("view/admin.php");
-        include("admin.php");
-        // include("view/footer.php");
-    case 'admin':
-        // echo "admin";
-        // inclure les pages pour admin
-        // include("view/header.php");
-        // include("view/admin.php");
-        include("admin.php");
-        // include("view/footer.php");
-    case 'admin':
-        // echo "admin";
-        // inclure les pages pour admin
-        // include("view/header.php");
-        // include("view/admin.php");
-        include("admin.php");
-        // include("view/footer.php");
-    case 'admin':
-        // echo "admin";
-        // inclure les pages pour admin
-        // include("view/header.php");
-        // include("view/admin.php");
-        include("admin.php");
-        // include("view/footer.php");
-
     case 'evaluateur':
         // echo "evaluateur";
         // inclure les pages pour évaluateur
