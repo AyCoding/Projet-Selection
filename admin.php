@@ -8,16 +8,7 @@
     <title>Espaces admininastreurs</title>
 </head>
 <body>
-<header>
-    <div class="logo">
-        <a href="index.html">Egnom</a>
-    </div>
-    <nav>
-        <a href="eval.html">Espaces évalutateurs</a>
-        <a href="secretaire.html">Espaces secrétaires</a>
-        <a href="admin.html">Espaces administrateurs</a>
-    </nav>
-</header>
+<?php include("view/header.php");?>
 
 <main>
     <h1 class="title">Espaces admininastreurs</h1>

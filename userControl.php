@@ -1,5 +1,4 @@
 <?php
-$grant = "admin";
 // $grant = $_POST['user']
 
 /* EXEMPLE
@@ -8,31 +7,20 @@ $sql = "SELECT * FROM user WHERE user = '$user'; "; // On récupère dans la tab
 */
 
 // Programme de vérification de l'utilisateur, pour afficher les pages qu'ils lui sont dédiés.
+$grant = "admin";
 switch ($grant) {
     case 'admin':
         // echo "admin";
-        // inclure les pages pour admin
-        // include("view/header.php");
-        // include("view/admin.php");
         include("admin.php");
-        // include("view/footer.php");
         break;
         
     case 'secretaire':
         // echo "secretaire";
-        // inclure les pages pour secrétaire
-        // include("view/header.php");
-        // include("view/secretaire.php");
         include("secretaire.php");
-        // include("view/footer.php");
         break;
 
     case 'evaluateur':
         // echo "evaluateur";
-        // inclure les pages pour évaluateur
-        // include("view/header.php");
-        // include("view/eval.php");
         include("eval.php");
-        // include("view/footer.php");
         break;
 }
