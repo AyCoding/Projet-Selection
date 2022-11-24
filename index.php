@@ -1,3 +1,7 @@
+<?php 
+// require "controller/login.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,11 +16,11 @@
     <div class="login">
         <h1>Egnom</h1>
         <p>Sélection Parcoursup</p>
-        <form action="/" method="POST">
+        <form action="controller/login.php" method="POST">
             <div class="form-group">
                 <input type="user" name="user" id="user" placeholder="Nom d’utilisateur">
                 <input type="password" name="password" id="password" placeholder="Mode de passe">
-                <input class="btn" type="submit" id="submit" value="Se connecter">
+                <input class="btn" type="submit" id="submit" name="submit" value="Se connecter">
                 <!-- <a href="eval.html" class="btn login-link" style="text-decoration: none;">Se connecter</a> -->
             </div>
         </form>

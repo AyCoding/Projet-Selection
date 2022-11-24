@@ -8,17 +8,24 @@ $grant = "admin";
         <a href="index.php">Egnom</a>
     </div>
     <nav>
-            
-        <?php if ($grant == "admin"): ?>
-        <a href="admin.php">Espaces administrateurs</a>
 
-        <?php elseif ($grant == "evalutateur"): ?>
-        <a href="eval.php">Espaces évalutateurs</a>
+        <?php switch ($grant) {
+            case 'evaluateur':
+                # code...
+                echo '<a href="eval.php">Espaces évalutateurs</a>';
+                break;
 
-        <?php elseif ($grant == "secretaire"): ?>
-        <a href="secretaire.php">Espaces secrétaires</a>
+            case 'secretaire':
+                # code...
+                echo '<a href="secretaire.php">Espaces secrétaires</a>';
+                break;
 
-        <?php endif ?>
+            case 'admin':
+                # code...
+                echo '<a href="admin.php">Espaces administrateurs</a>';
+                break;
+
+        } ?>
         
     </nav>
 </header>
