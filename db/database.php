@@ -10,5 +10,3 @@ $users = [
         'password' => 'pass'
     ],
 ];
-
-?>

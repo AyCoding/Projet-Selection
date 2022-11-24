@@ -1,4 +1,4 @@
-<?php 
+<?php
 // require "controller/login.php";
 ?>
 
@@ -16,7 +16,7 @@
     <div class="login">
         <h1>Egnom</h1>
         <p>Sélection Parcoursup</p>
-        <form action="controller/login.php" method="POST">
+        <form action="/" method="POST">
             <div class="form-group">
                 <input type="user" name="user" id="user" placeholder="Nom d’utilisateur">
                 <input type="password" name="password" id="password" placeholder="Mode de passe">

@@ -1,4 +1,3 @@
-<?php include("header.php");?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,11 +8,54 @@
     <title>Espaces secrétaires</title>
 </head>
 <body>
-<?php include("header.php");?>
-
+<?php include("view/header.php"); ?>
 
 <main>
     <h1 class="title">Espaces secrétaires</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th colspan="4">Listes des évaluations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+        </tbody>
+    </table>
+
+
 </main>
 </body>
 </html>
+<!-- CSS A REMETTRE DANS-->
+<style>
+    thead {
+        font-weight: bold;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    table,
+    td {
+        border: 1px solid #333;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+
+    tr > * {
+        padding: 15px 30px;
+    }
+
+</style>

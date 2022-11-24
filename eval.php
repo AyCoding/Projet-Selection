@@ -8,15 +8,9 @@
     <title>Espaces d'évaluateurs</title>
 </head>
 <body>
-<?php include("view/header.php");?>
+<?php include("view/header.php"); ?>
 
 <main>
-    <!--<div class="list-class">
-        <a href="#">SIO</a>
-        <a href="#">CG</a>
-        <a href="#">NDRC</a>
-    </div>-->
-
     <h1 class="title">Espaces évalutateurs</h1>
 
     <section class="grid">
