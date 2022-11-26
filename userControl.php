@@ -27,18 +27,19 @@ if (isset($_POST['submit'])) {
     $data = mysqli_fetch_array($result);
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
+        $_SESSION['connecte'] = true;
 
         switch ($data['role']) {
             case 'admin':
-                include "admin.php";
+                include "view/homepages/admin.php";
                 break;
 
             case 'secretaire':
-                include "secretaire.php";
+                include "view/homepages/secretaire.php";
                 break;
 
             case 'evaluateur':
-                include "eval.php";
+                include "view/homepages/eval.php";
                 break;
         }
     }

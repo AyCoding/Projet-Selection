@@ -2,8 +2,3 @@
 PHP
 Connexion
  -->
-<?php
-$users = '';
-
-?>
-
