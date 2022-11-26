@@ -3,10 +3,17 @@
 $users = [
     'user1' => [
         'name' => 'John',
-        'password' => 'pass'
+        'password' => 'pass',
+        'role' => 'evaluateur',
     ],
     'user2' => [
         'name' => 'Jane',
-        'password' => 'pass'
+        'password' => 'pass',
+        'role' => 'secretaire'
     ],
+    'user3' => [
+        'name' => 'AdminSys',
+        'password' => 'pass'
+
+    ]
 ];
