@@ -20,10 +20,10 @@ if (isset($_POST['submit'])) {
     // On récupère dans la table "user" tout les utilisateurs et les mots de passe
     $sql = "SELECT * FROM `users` WHERE pseudo = '$username' AND password = '$password'";
 
-
-    $result = mysqli_query($conn, $sql); // On prépare la lecture de BDD
-
-    $data = mysqli_fetch_array($result); // Récuperer toutes la BDD
+    // On prépare la lecture de BDD
+    $result = mysqli_query($conn, $sql);
+    // Récuperer toutes la BDD
+    $data = mysqli_fetch_array($result);
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
 
