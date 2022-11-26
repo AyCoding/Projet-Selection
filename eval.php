@@ -17,7 +17,7 @@
         <form action="" class="form-group">
             <!---->
             <div class="form-item">
-                <input type="text" name="" placeholder="Numéro candidat">
+                <input type="text" name="candidat" placeholder="Numéro candidat">
             </div>
             <div class="form-name">
                 <input type="text" name="name" placeholder="Nom">
@@ -33,39 +33,40 @@
             <div class="form-item radio" style=" display:flex;gap: 32px;">
                 <div>
                     <label for="">PRO</label>
-                    <input type="radio" name="bac" style="width: auto;">
+                    <input type="radio" name="Bac" style="width: auto;">
                 </div>
 
                 <div>
                     <label for="">S/ES</label>
-                    <input type="radio" name="bac" style="width: auto;">
+                    <input type="radio" name="Bac" style="width: auto;">
                 </div>
 
                 <div>
                     <label for="">L</label>
-                    <input type="radio" name="bac" style="width: auto;">
+                    <input type="radio" name="Bac" style="width: auto;">
                 </div>
                 <div>
                     <label for="">STMG</label>
-                    <input type="radio" name="bac" style="width: auto;">
+                    <input type="radio" name="Bac" style="width: auto;">
                 </div>
                 <div>
                     <label for="">Autres</label>
-                    <input type="radio" name="bac" style="width: auto;">
+                    <input type="radio" name="Bac" style="width: auto;">
                 </div>
             </div>
             <!---->
             <h4>Travail sérieux</h4>
             <div class="form-item radio" style=" display:flex;gap: 32px">
                 <label for="">Oui</label>
-                <input type="radio" name="btn-work" style="width: auto;">
+                <input type="radio" name="Travail" style="width: auto;">
 
                 <label for="">Non</label>
-                <input type="radio" name="btn-work" style="width: auto;">
+                <input type="radio" name="Travail" style="width: auto;">
+
             </div>
             <!---->
             <h4>Absence</h4>
-            <div class="form-item radio" style=" display:flex;gap: 32px">
+            <div class="form-item radio" style=" display:flex;gap: 32px" >
                 <label for="">Oui</label>
                 <input type="radio" name="Absence" style="width: auto;">
 

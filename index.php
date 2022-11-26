@@ -18,8 +18,8 @@
         <p>Sélection Parcoursup</p>
         <form action="userControl.php" method="POST">
             <div class="form-group">
-                <input type="user" name="user" id="user" placeholder="Nom d’utilisateur">
-                <input type="password" name="password" id="password" placeholder="Mode de passe">
+                <input type="user" name="user" id="user" placeholder="Nom d’utilisateur" required>
+                <input type="password" name="password" id="password" placeholder="Mode de passe" required>
                 <input class="btn" type="submit" id="submit" name="submit" value="Se connecter">
                 <!--<a href="eval.php" class="btn login-link" style="text-decoration: none;">Se connecter</a>-->
             </div>

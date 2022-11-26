@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,10 +26,10 @@
         </thead>
         <tbody>
         <tr>
-            <td>The table body</td>
-            <td>with two columns</td>
-            <td>The table body</td>
-            <td>with two columns</td>
+            <td>John Doe</td>
+            <td>1550060</td>
+            <td>Validé</td>
+            <td>#1</td>
         </tr>
         </tbody>
     </table>
@@ -33,7 +38,7 @@
 </main>
 </body>
 </html>
-<!-- CSS A REMETTRE DANS-->
+<!-- CSS A REMETTRE DANS FICHIERS SCSS-->
 <style>
     thead {
         font-weight: bold;
@@ -58,4 +63,9 @@
         padding: 15px 30px;
     }
 
+    td {
+        width: 200px;
+        max-width: 90%;
+        text-align: center;
+    }
 </style>

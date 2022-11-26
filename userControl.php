@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
 
     // On prépare la lecture de BDD
     $result = mysqli_query($conn, $sql);
+
     // Récuperer toutes la BDD
     $data = mysqli_fetch_array($result);
 
