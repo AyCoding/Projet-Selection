@@ -1,28 +1,31 @@
 <?php
+// Paramètre de connexion
 $dbServename = 'localhost';
 $dbUsername = 'root';
-$dbPassword = '';
+$dbPassword = '59$prQe$hYCfTHyh';
 $dbName = 'account';
 
 session_start();
 
+// Si l'envoie des pas vide.
 if (isset($_POST['submit'])) {
 
+    // Récupération des données de 'index.php'
     $username = $_POST['user'];
     $password = $_POST['password'];
 
+    // Connexion à la BDD
     $conn = mysqli_connect($dbServename, $dbUsername, $dbPassword, $dbName);
+
+    // On récupère dans la table "user" tout les utilisateurs et les mots de passe
     $sql = "SELECT * FROM `users` WHERE pseudo = '$username' AND password = '$password'";
 
 
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql); // On prépare la lecture de BDD
 
-    $data = mysqli_fetch_array($result);
+    $data = mysqli_fetch_array($result); // Récuperer toutes la BDD
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
-
-//        $_SESSION['connecte'] = true;
-//        echo $_SESSION['connecte'] = true;
 
         switch ($data['role']) {
             case 'admin':
