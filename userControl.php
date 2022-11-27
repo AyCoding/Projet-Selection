@@ -1,9 +1,6 @@
 <?php
 // Paramètre de connexion
-$dbServename = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '59$prQe$hYCfTHyh';
-$dbName = 'account';
+include "db/database.php";
 
 session_start();
 
@@ -43,5 +40,4 @@ if (isset($_POST['submit'])) {
                 break;
         }
     }
-
 }

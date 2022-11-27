@@ -1,9 +1,5 @@
 <?php
-
-$dbServename = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '59$prQe$hYCfTHyh';
-$dbName = 'account';
+include "db/database.php";
 
 // Connexion à la BDD
 $conn = mysqli_connect($dbServename, $dbUsername, $dbPassword, $dbName);
@@ -18,16 +14,6 @@ $result = mysqli_query($conn, $sql);
 $data = mysqli_fetch_array($result);
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.css">
-    <title>Espaces admininastreurs</title>
-</head>
-<body>
 <?php include("view/header.php"); ?>
 
 <main>
