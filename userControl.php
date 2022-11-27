@@ -23,8 +23,10 @@ if (isset($_POST['submit'])) {
     // Récuperer toutes la BDD
     $data = mysqli_fetch_array($result);
 
+
     if ($data['pseudo'] == $username && $data['password'] == $password) {
-        $_SESSION['connecte'] = true;
+    $_SESSION['LOGGED_USER'] = $data['pseudo'];
+
 
         switch ($data['role']) {
             case 'admin':
