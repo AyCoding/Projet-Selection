@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
 
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
-    $_SESSION['LOGGED_USER'] = $data['pseudo'];
+        $_SESSION['LOGGED_USER'] = $data['pseudo'];
+        $_SESSION['CONNECTED'] = true;
 
 
         switch ($data['role']) {

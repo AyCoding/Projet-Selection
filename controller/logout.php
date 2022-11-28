@@ -1,9 +1,6 @@
-<!-- 
-PHP
-Déconnexion
--->
 <?php
+//! LOGOUT
+
 session_start();
 unset($_SESSION['connecte']);
-header('Location: /')
-?>
+header('Location: /login.php');
