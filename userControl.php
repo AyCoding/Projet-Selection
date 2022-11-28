@@ -25,8 +25,7 @@ if (isset($_POST['submit'])) {
 
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
-        $_SESSION['LOGGED_USER'] = $data['pseudo'];
-        $_SESSION['CONNECTED'] = true;
+
 
 
         switch ($data['role']) {
@@ -42,5 +41,8 @@ if (isset($_POST['submit'])) {
                 include "view/homepages/eval.php";
                 break;
         }
+        $_SESSION['LOGGED_USER'] = $data['pseudo'];
+        $_SESSION['CONNECTED'] = true;
+        exit();
     }
 }
