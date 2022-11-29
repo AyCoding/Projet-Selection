@@ -37,12 +37,14 @@ a {
 /* SCSS INDEX.HTML */
 section.index {
   margin: 200px auto;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   text-align: center;
 }
 section.index .login {
   margin: auto;
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
 }
 
 h1 {
@@ -119,7 +121,8 @@ main .title {
 }
 .grid .form-group {
   margin: auto;
-  width: 50%;
+  width: 90%;
+  max-width: 600px;
 }
 .grid .form-group input {
   width: 100%;
@@ -143,6 +146,7 @@ main .title {
   align-items: center;
   width: 100%;
   margin: 0 0 20px;
+  flex-flow: wrap;
 }
 .grid .submit input {
   margin-bottom: 20px;

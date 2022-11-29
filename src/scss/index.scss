@@ -1,11 +1,13 @@
 section.index {
   margin: 200px auto;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   text-align: center;
 
   .login {
     margin: auto;
-    width: 350px;
+    width: 90%;
+    max-width: 350px;
   }
 }
 
