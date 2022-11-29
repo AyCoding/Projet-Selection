@@ -1,5 +1,3 @@
-<!-- HEADER -->
-<!--<link rel="stylesheet" href="../../src/css/style.css">-->
 <link rel="stylesheet" href="src/css/style.css">
 <header>
     <div class="logo">
