@@ -33,3 +33,9 @@ include "userControl.php";
     </div>
 </section>
 </body>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+</style>

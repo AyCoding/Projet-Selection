@@ -12,23 +12,20 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     // Connexion à la BDD
-    $conn = mysqli_connect($dbServename, $dbUsername, $dbPassword, $dbName);
+    $db = new PDO('mysql:host=localhost;dbname=account;charset=UTF8;', 'root', '59$prQe$hYCfTHyh');
 
     // On récupère dans la table "user" tout les utilisateurs et les mots de passe
     $sql = "SELECT * FROM `users` WHERE pseudo = '$username' AND password = '$password'";
 
     // On prépare la lecture de BDD
-    $result = mysqli_query($conn, $sql);
+    $result = $db->prepare($sql);
+    $result->execute();
 
-    // Récuperer toutes la BDD
-    $data = mysqli_fetch_array($result);
+    // Récuperer la ligne
+    $data = $result->fetch();
 
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
-
-        $_SESSION['LOGGED_USER'] = $data['pseudo'];
-        $_SESSION['LOGGED_PASSWORD'] = $data['password'];
-        $_SESSION['LOGGED_ROLE'] = $data['role'];
 
         switch ($data['role']) {
             case 'admin':
@@ -43,8 +40,10 @@ if (isset($_POST['submit'])) {
                 include "view/homepages/eval.php";
                 break;
         }
-
-//        $_SESSION['CONNECTED'] = true;
+        $_SESSION['LOGGED_USER'] = $data['pseudo'];
+        $_SESSION['LOGGED_PASSWORD'] = $data['password'];
+        $_SESSION['LOGGED_ROLE'] = $data['role'];
+        $_SESSION['CONNECTED'] = true;
     }
     exit();
 }

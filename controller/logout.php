@@ -2,5 +2,5 @@
 //! LOGOUT
 
 session_start();
-unset($_SESSION['connecte']);
+unset($_SESSION['CONNECTED']);
 header('Location: /');

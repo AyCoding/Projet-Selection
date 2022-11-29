@@ -1,22 +1,22 @@
 <?php
-include "db/database.php";
-
 // Connexion à la BDD
-$conn = mysqli_connect($dbServename, $dbUsername, $dbPassword, $dbName);
+$db = new PDO('mysql:host=localhost;dbname=projetselection;charset=UTF8;', 'root', '59$prQe$hYCfTHyh');
 
 // On récupère dans la table "user" tout les utilisateurs et les mots de passe
-$sql = "SELECT * FROM `users` WHERE pseudo  AND password";
+$sql = "SELECT * FROM comptes";
 
 // On prépare la lecture de BDD
-$result = mysqli_query($conn, $sql);
+$result = $db->prepare($sql);
+$result->execute();
 
 // Récuperer toutes la BDD
-$data = mysqli_fetch_array($result);
-?>
+$data = $result->fetchAll();
 
+?>
 <?php include("view/header.php"); ?>
 
 <main>
+
     <h1 class="title">Espaces admininastreurs</h1>
 
     <table>
@@ -27,15 +27,16 @@ $data = mysqli_fetch_array($result);
         </thead>
         <tbody>
 
-        <tr>
-            <td>
-                Joshua Deco
-            </td>
-
-            <td>Evaluateur</td>
-            <td>Modifier</td>
-            <td>Supprimer</td>
-        </tr>
+        <?php
+    foreach($data as $key) {
+        echo "<tr>";
+        echo "<td>$key[prenom]</td>";
+        echo "<td>$key[nom]</td>";
+        echo "<td>$key[role]</td>";
+//        echo "<td><a href="./modify?prenom=$key[prenom]nom=$key[nom]"></td>";
+        echo"</tr>";
+    }
+        ?>
 
         </tbody>
     </table>
