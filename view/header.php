@@ -4,8 +4,20 @@
         <a href="/controller/logout.php">Déconnexion</a>
     </div>
     <nav>
-        <!--<a href="eval.php">Espaces évalutateurs</a>
-        <a href="secretaire.php">Espaces secrétaires</a>
-        <a href="admin.php">Espaces administrateurs</a>-->
+        <?php
+        switch ($_SESSION['LOGGED_ROLE']) {
+            case 'evaluateur':
+                echo '<a href="#">Espaces évalutateurs</a>';
+                break;
+
+            case 'secretaire':
+                echo '<a href="#">Espaces secrétaires</a>';
+                break;
+
+            case 'admin';
+                echo '<a href="#">Espaces administrateurs</a>';
+                break;
+        }
+        ?>
     </nav>
 </header>

@@ -6,7 +6,7 @@ Connecte();
 Forcer_connexion();
 
 if (Connecte()) {
-    switch ($_SESSION['LOGGED_ROLE'] || $data['role']) {
+    switch ($_SESSION['LOGGED_ROLE']) {
         case 'admin':
             include "view/homepages/admin.php";
             break;
@@ -20,4 +20,3 @@ if (Connecte()) {
             break;
     }
 }
-

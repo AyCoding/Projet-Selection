@@ -11,7 +11,7 @@ $result = $db->prepare($sql);
 $result->execute();
 
 // Récuperer la ligne
-$data = $result->fetch();
+$data_admin = $result->fetch();
 ?>
 <?php include("view/header.php"); ?>
 
@@ -29,8 +29,8 @@ $data = $result->fetch();
 
         <?php
         echo "<tr>";
-        echo "<td>$data[pseudo]</td>";
-        echo "<td>$data[role]</td>";
+        echo "<td>$data_admin[pseudo]</td>";
+        echo "<td>$data_admin[role]</td>";
         echo "<td><a href=''>Modifier</a></td>";
         echo "<td><a href=''>Supprimer</a></td>";
         echo "</tr>";
@@ -38,6 +38,7 @@ $data = $result->fetch();
 
         </tbody>
     </table>
+    <a href="#" class="btn__add-account">Ajouter un compte</a>
 </main>
 
 </body>
@@ -72,4 +73,22 @@ $data = $result->fetch();
         max-width: 90%;
         text-align: center;
     }
+
+    .btn__add-account {
+        background: #333;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 200px;
+        padding: 15px 30px;
+        text-decoration: none!important;
+    }
+
+    .btn__add-account:hover {
+        background: #555;
+        transition: .3s;
+    }
+
 </style>
