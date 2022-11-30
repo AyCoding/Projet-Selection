@@ -5,8 +5,8 @@ include "controller/auth.php";
 Connecte();
 Forcer_connexion();
 
-if (Connecte()){
-    switch ($_SESSION['LOGGED_ROLE']){
+if (Connecte()) {
+    switch ($_SESSION['LOGGED_ROLE'] || $data['role']) {
         case 'admin':
             include "view/homepages/admin.php";
             break;
@@ -19,7 +19,5 @@ if (Connecte()){
             include "view/homepages/eval.php";
             break;
     }
-} else{
-    header('location: ./login');
 }
 

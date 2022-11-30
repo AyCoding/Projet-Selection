@@ -20,7 +20,7 @@
             <td>John Doe</td>
             <td>1550060</td>
             <td>Validé</td>
-            <td>#1</td>
+            <td>18/20</td>
         </tr>
         </tbody>
     </table>

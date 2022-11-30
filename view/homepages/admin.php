@@ -1,17 +1,17 @@
 <?php
+include "db/database.php";
 // Connexion à la BDD
-$db = new PDO('mysql:host=localhost;dbname=projetselection;charset=UTF8;', 'root', '59$prQe$hYCfTHyh');
+$db = new PDO("mysql:host=" . $dbServename . ";dbname=" . $dbName, $dbUsername, $dbPassword);
 
 // On récupère dans la table "user" tout les utilisateurs et les mots de passe
-$sql = "SELECT * FROM comptes";
+$sql = "SELECT * FROM `users`";
 
 // On prépare la lecture de BDD
 $result = $db->prepare($sql);
 $result->execute();
 
-// Récuperer toutes la BDD
-$data = $result->fetchAll();
-
+// Récuperer la ligne
+$data = $result->fetch();
 ?>
 <?php include("view/header.php"); ?>
 
@@ -28,14 +28,12 @@ $data = $result->fetchAll();
         <tbody>
 
         <?php
-    foreach($data as $key) {
         echo "<tr>";
-        echo "<td>$key[prenom]</td>";
-        echo "<td>$key[nom]</td>";
-        echo "<td>$key[role]</td>";
-//        echo "<td><a href="./modify?prenom=$key[prenom]nom=$key[nom]"></td>";
-        echo"</tr>";
-    }
+        echo "<td>$data[pseudo]</td>";
+        echo "<td>$data[role]</td>";
+        echo "<td><a href=''>Modifier</a></td>";
+        echo "<td><a href=''>Supprimer</a></td>";
+        echo "</tr>";
         ?>
 
         </tbody>
