@@ -7,7 +7,7 @@ session_start();
 // Si l'envoie des pas vide.
 if (isset($_POST['submit'])) {
 
-    // Récupération des données de 'index.php'
+    // Récupération des données de 'login.php'
     $username = $_POST['user'];
     $password = $_POST['password'];
 

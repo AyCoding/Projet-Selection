@@ -11,7 +11,7 @@ $result = $db->prepare($sql);
 $result->execute();
 
 // Récuperer la ligne
-$data_admin = $result->fetch();
+$data_admin = $result->fetchAll();
 ?>
 <?php include("view/header.php"); ?>
 
@@ -28,12 +28,14 @@ $data_admin = $result->fetch();
         <tbody>
 
         <?php
-        echo "<tr>";
-        echo "<td>$data_admin[pseudo]</td>";
-        echo "<td>$data_admin[role]</td>";
-        echo "<td><a href=''>Modifier</a></td>";
-        echo "<td><a href=''>Supprimer</a></td>";
-        echo "</tr>";
+        foreach ($data_admin as $key => $value) {
+            echo "<tr>";
+            echo '<td>' . $value['pseudo'] . '</td>';
+            echo '<td>' . $value['role'] . '</td>';
+            echo "<td><a href='modif-user.php?pseudo={$value['pseudo']}'>Modifier</a></td>";
+            echo "<td><a href='delete.php?id={$value['id']}'>Supprimer</a></td>";
+            echo "</tr>";
+        }
         ?>
 
         </tbody>
@@ -83,7 +85,7 @@ $data_admin = $result->fetch();
         margin: 20px auto;
         width: 200px;
         padding: 15px 30px;
-        text-decoration: none!important;
+        text-decoration: none !important;
     }
 
     .btn__add-account:hover {
