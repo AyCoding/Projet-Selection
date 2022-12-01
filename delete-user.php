@@ -15,8 +15,9 @@ $data_del_user = $result->fetch();
 
 if (isset($_GET['id'])) {
     if (isset($_POST['submit'])) {
-        $sql = "DELETE * FROM 'users' WHERE id = '{$_GET['id']}'";
+        $sql = "DELETE FROM `users` WHERE `users`.`id` = {$_GET['id']}";
         $result = $db->prepare($sql);
         $result->execute();
+        header('location: /');
     }
 }
