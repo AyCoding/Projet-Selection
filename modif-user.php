@@ -8,12 +8,10 @@ if (isset($_GET['id'])) {
         $pseudo = $_POST['pseudo'];
         $role = $_POST['role'];
 
-//        $sql = "UPDATE `users` SET `pseudo` = '$pseudo' AND `role` = '$role' WHERE `id` = '$id'";
         $sql = "UPDATE `users` SET `pseudo`= '$pseudo',`role`= '$role' WHERE `id`= '$id'";
-
         $result = $db->prepare($sql);
         $result->execute();
-//        header('location: /');
+        header('location: /');
     }
 }
 
