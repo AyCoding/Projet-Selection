@@ -25,6 +25,11 @@ include "delete-user.php";
         margin: 30px;
     }
 
+    form {
+        display: flex;
+        gap: 10px;
+    }
+
     form input {
         padding: 10px 30px;
         border: none;

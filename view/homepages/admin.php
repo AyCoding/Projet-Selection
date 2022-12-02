@@ -38,7 +38,7 @@ $data_admin = $result->fetchAll();
 
         </tbody>
     </table>
-    <a href="#" class="btn__add-account">Ajouter un compte</a>
+    <a href="create.php" class="btn__add-account">Ajouter un compte</a>
 </main>
 
 </body>

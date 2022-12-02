@@ -1,5 +1,5 @@
 <?php
-include "modif-user.php";
+include "create-user.php";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -9,18 +9,15 @@ include "modif-user.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="src/css/style.css">
-    <title>Modification</title>
+    <title>Ajouter utilisateur</title>
 </head>
 <body>
 
-<h1>Modification du compte</h1>
+<h1>Ajout d'un compte</h1>
 <form action="" method="POST">
-    <?php
-    if (isset($_GET['pseudo']) && isset($_GET['role'])) {
-        echo "<input type='text' name='pseudo' placeholder='pseudo' value=" . $_GET['pseudo'] . ">";
-        echo "<input type='text' name='role' placeholder='role' value=" . $_GET['role'] . ">";
-    }
-    ?>
+    <input type="text" name="pseudo" placeholder="nom d'utilisateur">
+    <input type="password" name="password" placeholder="password">
+    <input type="text" name="role" placeholder="secretaire,evaluateur,admin">
     <input type="submit" name="submit" value="Acceptez">
 </form>
 
