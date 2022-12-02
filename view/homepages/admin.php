@@ -1,7 +1,5 @@
 <?php
 include "db/database.php";
-// Connexion à la BDD
-$db = new PDO("mysql:host=" . $dbServename . ";dbname=" . $dbName, $dbUsername, $dbPassword);
 
 // On récupère dans la table "user" tout les utilisateurs et les mots de passe
 $sql = "SELECT * FROM `users`";
@@ -32,7 +30,7 @@ $data_admin = $result->fetchAll();
             echo "<tr>";
             echo '<td>' . $value['pseudo'] . '</td>';
             echo '<td>' . $value['role'] . '</td>';
-            echo "<td><a href='modif-user.php?pseudo={$value['pseudo']}'>Modifier</a></td>";
+            echo "<td><a href='modif.php?id={$value['id']}&pseudo={$value['pseudo']}&role={$value['role']}'>Modifier</a></td>";
             echo "<td><a href='delete.php?id={$value['id']}'>Supprimer</a></td>";
             echo "</tr>";
         }
