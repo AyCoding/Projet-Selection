@@ -15,8 +15,10 @@ include "modif-user.php";
 
 <h1>Modification du compte</h1>
 <form action="" method="POST">
+
     <?php
     if (isset($_GET['pseudo']) && isset($_GET['role'])) {
+
         echo "<input type='text' name='pseudo' placeholder='pseudo' value=" . $_GET['pseudo'] . ">";
         echo "<input type='text' name='role' placeholder='role' value=" . $_GET['role'] . ">";
     }

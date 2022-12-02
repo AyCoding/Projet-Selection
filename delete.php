@@ -14,6 +14,7 @@ include "delete-user.php";
 <body>
 
 <h1>Confirmation de la suppression</h1>
+
 <form action="" method="POST">
     <input type="submit" name="submit" value="Acceptez">
 </form>

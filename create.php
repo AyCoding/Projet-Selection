@@ -14,6 +14,7 @@ include "create-user.php";
 <body>
 
 <h1>Ajout d'un compte</h1>
+
 <form action="" method="POST">
     <input type="text" name="pseudo" placeholder="nom d'utilisateur">
     <input type="password" name="password" placeholder="password">

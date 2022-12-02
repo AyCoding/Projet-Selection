@@ -7,7 +7,9 @@ if (isset($_POST['submit'])) {
     $pass = $_POST['password'];
     $role = $_POST['role'];
 
+    // Insertion dans la table 'users'
     $sql = "INSERT INTO `users`(pseudo, password, role) VALUES ('$pseudo','$pass','$role')";
+
     $result = $db->prepare($sql);
     $result->execute();
     header('location: /');
