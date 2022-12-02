@@ -1,5 +1,5 @@
 <?php
-include "modif-user.php";
+include "controller/modif-user.php";
 ?>
 <!doctype html>
 <html lang="fr">

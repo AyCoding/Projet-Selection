@@ -1,5 +1,5 @@
 <?php
-include "create-user.php";
+include "controller/create-user.php";
 ?>
 <!doctype html>
 <html lang="fr">

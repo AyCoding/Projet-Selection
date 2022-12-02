@@ -1,5 +1,5 @@
 <?php
-include "delete-user.php";
+include "controller/delete-user.php";
 ?>
 <!doctype html>
 <html lang="fr">
