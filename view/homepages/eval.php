@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +16,7 @@
     <h1 class="title">Espaces évalutateurs</h1>
 
     <section class="grid">
-        <form action="" class="form-group">
+        <form action="grille.php" method="POST" class="form-group">
             <!---->
             <div class="form-item">
                 <input type="text" name="candidat" placeholder="Numéro candidat">
@@ -26,11 +25,6 @@
                 <input type="text" name="name" placeholder="Nom">
                 <input type="text" name="first-name" placeholder="Prénom">
             </div>
-            <!---->
-            <!-- <div class="form-item">
-                <label for=""></label>
-                <input type="text" name="first-name" placeholder="">
-            </div> -->
             <!---->
             <h4>Bac</h4>
             <div class="form-item radio" style=" display:flex;gap: 32px;">
@@ -69,7 +63,7 @@
             </div>
             <!---->
             <h4>Absence</h4>
-            <div class="form-item radio" style=" display:flex;gap: 32px" >
+            <div class="form-item radio" style=" display:flex;gap: 32px">
                 <label for="">Oui</label>
                 <input type="radio" name="Absence" style="width: auto;">
 
@@ -135,11 +129,11 @@
             <div class="form-item">
                 <h4>Remarque(s)</h4>
                 <label for=""></label>
-                <textarea name="" id="" cols="30" rows="0"></textarea>
+                <textarea name="Remarque" id="" cols="30" rows="0"></textarea>
             </div>
             <!---->
             <div class="form-item submit">
-                <input class="btn" type="submit" value="Envoyer">
+                <input class="btn" type="submit" name="submit" value="Envoyer">
             </div>
             <!---->
         </form>
