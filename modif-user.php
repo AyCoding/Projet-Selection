@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
 
         $result = $db->prepare($sql);
         $result->execute();
-//        header('location: /');
+        header('location: /');
     }
 }
 
