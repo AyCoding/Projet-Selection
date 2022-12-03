@@ -78,7 +78,10 @@ $data = $result->fetchAll();
             echo '<td>' . $value['AvisProviseur'] . '</td>';
             echo '<td>' . $value['LM'] . '</td>';
             echo '<td>' . $value["Remarque"] . '</td>';
-            echo "<td><a href='delete-eval.php?id={$value['id']}'>Supprimer</a></td>";
+            echo "<td>
+                    <a href='delete-eval.php?id={$value['id']}'>Supprimer</a>
+                    <a href='modif-eval.php?id={$value['id']}&candidat={$value['candidat']}&name={$value['name']}&first_name={$value['first_name']}&Bac={$value['Bac']}&Travail={$value['Travail']}&Absence={$value['Absence']}&Comportement={$value['Comportement']}&EtudeSUP={$value['EtudeSUP']}&AvisPP={$value['AvisPP']}&AvisProviseur={$value['AvisProviseur']}&LM={$value['LM']}&Remarque={$value['Remarque']}'>Modifier</a>
+                    </td>";
             echo "</tr>";
         }
         ?>

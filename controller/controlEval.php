@@ -14,7 +14,6 @@ if (isset($_POST['submit'])) {
     $AvisProviseur = $_POST['AvisProviseur'];
     $LM = $_POST['LM'];
     $Remarque = $_POST['Remarque'];
-//    $points = $_POST['points'];
 
     $sql = "INSERT INTO `evaluation` (`candidat`, `name`, `first_name`, `Bac`, `Travail`, `Absence`, `Comportement`, `EtudeSUP`, `AvisPP`, `AvisProviseur`, `LM`, `Remarque`) VALUES ('$candidat','$name','$first_name','$Bac','$Travail','$Absence','$Comportement','$EtudeSUP','$AvisPP','$AvisProviseur','$LM','{$Remarque}')";
     $result = $db->prepare($sql);
