@@ -43,7 +43,7 @@ $data = $result->fetchAll();
     <table>
         <thead>
         <tr>
-            <th colspan="12">Listes des évaluations</th>
+            <th colspan="13">Listes des évaluations</th>
         </tr>
         <tr>
             <th>Candidat</th>
@@ -58,6 +58,7 @@ $data = $result->fetchAll();
             <th>AvisProviseur</th>
             <th>LM</th>
             <th>Remarque</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -76,7 +77,8 @@ $data = $result->fetchAll();
             echo '<td>' . $value['AvisPP'] . '</td>';
             echo '<td>' . $value['AvisProviseur'] . '</td>';
             echo '<td>' . $value['LM'] . '</td>';
-            echo '<td>' . $value['Remarque'] . '</td>';
+            echo '<td>' . $value["Remarque"] . '</td>';
+            echo "<td><a href='delete-eval.php?id={$value['id']}'>Supprimer</a></td>";
             echo "</tr>";
         }
         ?>
