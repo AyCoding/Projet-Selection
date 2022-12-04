@@ -1,4 +1,5 @@
 <?php
+$_SESSION['LOGGED_ROLE'] = 'evaluateur';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

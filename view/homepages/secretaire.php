@@ -1,4 +1,7 @@
-<?php include("view/header.php"); ?>
+<?php
+$_SESSION['LOGGED_ROLE'] = 'secretaire';
+include("view/header.php");
+?>
 
 <main>
     <h1 class="title">Espaces secrétaires</h1>

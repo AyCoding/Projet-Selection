@@ -10,6 +10,7 @@ $result->execute();
 
 // Récuperer la ligne
 $data_admin = $result->fetchAll();
+$_SESSION['LOGGED_ROLE'] = 'admin';
 ?>
 <?php include("view/header.php"); ?>
 
