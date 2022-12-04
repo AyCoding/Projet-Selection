@@ -1,8 +1,19 @@
 <?php
-$_SESSION['LOGGED_ROLE'] = 'secretaire';
-include("view/header.php");
-?>
 
+include "db/database.php";
+
+// On récupère dans la table "user" tout les utilisateurs et les mots de passe
+$sql = "SELECT * FROM `evaluation`";
+
+// On prépare la lecture de BDD
+$result = $db->prepare($sql);
+$result->execute();
+
+// Récuperer la ligne
+$data_secretaire = $result->fetchAll();
+$_SESSION['LOGGED_ROLE'] = 'secretaire';
+?>
+<?php include "view/header.php"; ?>
 <main>
     <h1 class="title">Espaces secrétaires</h1>
 
@@ -19,12 +30,16 @@ include("view/header.php");
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>John Doe</td>
-            <td>1550060</td>
-            <td>Validé</td>
-            <td>18/20</td>
-        </tr>
+        <?php
+        foreach ($data_secretaire as $key => $value) {
+            echo "<tr>";
+            echo '<td>' . $value['name'].' '. $value['first_name']. '</td>';
+            echo '<td>' . $value['candidat'] . '</td>';
+            echo '<td>Validé</td>';
+            echo '<td>18/20</td>';
+            echo "</tr>";
+        }
+        ?>
         </tbody>
     </table>
 
