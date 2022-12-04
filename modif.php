@@ -20,7 +20,28 @@ include "controller/modif-user.php";
     if (isset($_GET['pseudo']) && isset($_GET['role'])) {
 
         echo "<input type='text' name='pseudo' placeholder='pseudo' value=" . $_GET['pseudo'] . ">";
-        echo "<input type='text' name='role' placeholder='role' value=" . $_GET['role'] . ">";
+//        echo "<input type='text' name='role' placeholder='role' value=" . $_GET['role'] . ">";
+        echo '<SELECT name="role" size="1">';
+
+        switch ($_GET['role']) {
+            case 'evaluateur':
+                echo "<OPTION selected>evaluateur";
+                echo "<OPTION>secretaire";
+                echo "<OPTION>admin";
+                break;
+
+            case 'secretaire':
+                echo "<OPTION>evaluateur";
+                echo "<OPTION selected>secretaire";
+                echo "<OPTION>admin";
+                break;
+
+            case 'admin':
+                echo "<OPTION>evaluateur";
+                echo "<OPTION>secretaire";
+                echo "<OPTION selected>admin";
+        }
+        echo "</SELECT>";
     }
     ?>
     <input type="submit" name="submit" value="Acceptez">
@@ -38,7 +59,7 @@ include "controller/modif-user.php";
         gap: 10px;
     }
 
-    form input {
+    form input, select {
         padding: 10px 30px;
         border: none;
         cursor: pointer;

@@ -18,7 +18,12 @@ include "controller/create-user.php";
 <form action="" method="POST">
     <input type="text" name="pseudo" placeholder="nom d'utilisateur">
     <input type="password" name="password" placeholder="password">
-    <input type="text" name="role" placeholder="secretaire,evaluateur,admin">
+<!--    <input type="text" name="role" placeholder="secretaire,evaluateur,admin">-->
+    <SELECT name="role" size="1">
+        <OPTION>evaluateur
+        <OPTION>secretaire
+        <OPTION>admin
+    </SELECT>
     <input type="submit" name="submit" value="Acceptez">
 </form>
 
@@ -34,7 +39,7 @@ include "controller/create-user.php";
         gap: 10px;
     }
 
-    form input {
+    form input, select {
         padding: 10px 30px;
         border: none;
         cursor: pointer;
