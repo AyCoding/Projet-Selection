@@ -8,7 +8,7 @@ session_start();
 if (isset($_POST['submit'])) {
 
     // Récupération des données de 'login.php'
-    $username = $_POST['user'];
+    $username = $_POST['pseudo'];
     $password = $_POST['password'];
 
     // Connexion à la BDD
@@ -27,23 +27,14 @@ if (isset($_POST['submit'])) {
 
     if ($data['pseudo'] == $username && $data['password'] == $password) {
 
-        switch ($data['role']) {
-            case 'admin':
-                include "view/homepages/admin.php";
-                break;
-
-            case 'secretaire':
-                include "view/homepages/secretaire.php";
-                break;
-
-            case 'evaluateur':
-                include "view/homepages/eval.php";
-                break;
-        }
         $_SESSION['LOGGED_USER'] = $data['pseudo'];
         $_SESSION['LOGGED_PASSWORD'] = $data['password'];
         $_SESSION['LOGGED_ROLE'] = $data['role'];
         $_SESSION['CONNECTED'] = true;
+        header('location: /');
+        exit();
+
+    } else {
+        $error = "Nom d'utilisateur ou mot de passe incorrects !";
     }
-    exit();
 }
