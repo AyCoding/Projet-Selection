@@ -12,6 +12,39 @@ $result->execute();
 // Récuperer la ligne
 $data_secretaire = $result->fetchAll();
 $_SESSION['LOGGED_ROLE'] = 'secretaire';
+
+/*
+ * == Travail sérieux ==
+ * Oui = +1
+ * Non = -1
+ *
+ * == Absence =
+ * Oui = -2
+ * Non = +1
+ *
+ * == Attidude ==
+ * Oui = Dossier refusé
+ * Non = +0
+ *
+ * == AvisPP ==
+ * B +2
+ * AB +1
+ * Insuf. -1
+ * Négatif -2
+ *
+ * == Avis Proviseur ==
+ * B +2
+ * AB +1
+ * Insuf. -1
+ * Négatif -2
+ *
+ * == LM ==
+ * B +2
+ * AB +1
+ * Insuf. -1
+ * Négatif -2
+ * */
+
 ?>
 <?php include "view/header.php"; ?>
 <main>
@@ -32,11 +65,19 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
         <tbody>
         <?php
         foreach ($data_secretaire as $key => $value) {
+            $points = 0;
+            include "controller/points-calc.php";
+
+            if ($points >= 10) {
+                $validation = "Validé !";
+            } else {
+                $validation = "Resufé !";
+            }
             echo "<tr>";
-            echo '<td>' . $value['name'].' '. $value['first_name']. '</td>';
+            echo '<td>' . $value['name'] . ' ' . $value['first_name'] . '</td>';
             echo '<td>' . $value['candidat'] . '</td>';
-            echo '<td>Validé</td>';
-            echo '<td>18/20</td>';
+            echo '<td>' . $validation . '</td>';
+            echo '<td>' . $points . '</td>';
             echo "</tr>";
         }
         ?>
