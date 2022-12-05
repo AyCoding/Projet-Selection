@@ -71,7 +71,7 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
             if ($points >= 10) {
                 $validation = "Validé !";
             } else {
-                $validation = "Resufé !";
+                $validation = "Refusé !";
             }
             echo "<tr>";
             echo '<td>' . $value['name'] . ' ' . $value['first_name'] . '</td>';
