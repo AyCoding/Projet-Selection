@@ -12,39 +12,6 @@ $result->execute();
 // Récuperer la ligne
 $data_secretaire = $result->fetchAll();
 $_SESSION['LOGGED_ROLE'] = 'secretaire';
-
-/*
- * == Travail sérieux ==
- * Oui = +1
- * Non = -1
- *
- * == Absence =
- * Oui = -2
- * Non = +1
- *
- * == Attidude ==
- * Oui = Dossier refusé
- * Non = +0
- *
- * == AvisPP ==
- * B +2
- * AB +1
- * Insuf. -1
- * Négatif -2
- *
- * == Avis Proviseur ==
- * B +2
- * AB +1
- * Insuf. -1
- * Négatif -2
- *
- * == LM ==
- * B +2
- * AB +1
- * Insuf. -1
- * Négatif -2
- * */
-
 ?>
 <?php include "view/header.php"; ?>
 <main>
@@ -83,8 +50,7 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
         ?>
         </tbody>
     </table>
-
-
+    <a href="controller/extractToCSV.php" class="btn__downloads">Télécharger les notes</a>
 </main>
 </body>
 </html>
@@ -117,5 +83,22 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
         width: 200px;
         max-width: 90%;
         text-align: center;
+    }
+
+    .btn__downloads {
+        background: #333;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 200px;
+        padding: 15px 30px;
+        text-decoration: none !important;
+    }
+
+    .btn__downloads:hover {
+        background: #555;
+        transition: .3s;
     }
 </style>
