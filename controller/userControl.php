@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
     $data = $result->fetch();
 
 
-    if ($data['pseudo'] == $username && $data['password'] == $password) {
+
+    if (isset($data['pseudo']) == $username && isset($data['password']) == $password) {
 
         $_SESSION['LOGGED_USER'] = $data['pseudo'];
         $_SESSION['LOGGED_PASSWORD'] = $data['password'];

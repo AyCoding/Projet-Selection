@@ -1,6 +1,7 @@
 <!-- 
 PHP
 Connexion
+NON FONCTIONNELLES
  -->
 <?php
 $error = False;
@@ -26,7 +27,7 @@ include "controller/traitementInscription.php";
                 <input type="text" name="pseudo" id="pseudo" placeholder="Nom d’utilisateur" required>
                 <input type="password" name="password" id="password" placeholder="Mode de passe" required>
                 <input type="password" name="password-confirm" id="password" placeholder="Confirmation du mode de passe" required>
-                <input class="btn" type="submit" id="submit" name="submit" value="Se connecter">
+                <input class="btn" type="submit" id="submit" name="submit" value="S'inscrire">
                 <?php
                 if ($error) {
                     echo '<div style="color: red; padding: 15px 30px; margin: 10px auto;background: #F2F2F2;font-weight: bold">' . $error . '</div>';
