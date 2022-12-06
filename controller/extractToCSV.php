@@ -1,3 +1,4 @@
+"Nom";"Prénom";"Numéro candidat";"Points";
 <?php
 include "../db/database.php";
 
