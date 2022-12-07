@@ -24,8 +24,6 @@ if (isset($_POST['submit'])) {
     // Récuperer la ligne
     $data = $result->fetch();
 
-
-
     if (isset($data['pseudo']) == $username && isset($data['password']) == $password) {
 
         $_SESSION['LOGGED_USER'] = $data['pseudo'];
