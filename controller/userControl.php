@@ -29,7 +29,6 @@ if (isset($_POST['submit'])) {
     if (isset($data['pseudo']) == $username && isset($data['password']) == $password) {
 
         $_SESSION['LOGGED_USER'] = $data['pseudo'];
-        $_SESSION['LOGGED_PASSWORD'] = $data['password'];
         $_SESSION['LOGGED_ROLE'] = $data['role'];
         $_SESSION['CONNECTED'] = true;
         header('location: /');
