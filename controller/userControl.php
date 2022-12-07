@@ -11,9 +11,6 @@ if (isset($_POST['submit'])) {
     $username = $_POST['pseudo'];
     $password = $_POST['password'];
 
-    // Connexion à la BDD
-//    $db = new PDO("mysql:host=" . $dbServename . ";dbname=" . $dbName, $dbUsername, $dbPassword);
-
     // On récupère dans la table "user" tout les utilisateurs et les mots de passe
     $sql = "SELECT * FROM `users` WHERE pseudo = '$username' AND password = '$password'";
 

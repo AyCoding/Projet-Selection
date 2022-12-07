@@ -10,7 +10,6 @@ $result = $db->prepare($sql);
 $result->execute();
 
 
-
 // Récuperer la ligne
 $data = $result->fetchAll();
 foreach ($data as $value) {
@@ -22,7 +21,7 @@ foreach ($data as $value) {
     } else {
         $validation = "Refusé !";
     }
-    echo '"' . $value['name'] . '";"' . $value['first_name'] . '";"' . $value['candidat'] . '";"' . $points . '"' . "\n";
+    echo '"' . $value['name'] . '";"' . $value['first_name'] . '";"' . $value['candidat'] . '";"' . $points . '/20' . '"' . "\n";
 }
 
 

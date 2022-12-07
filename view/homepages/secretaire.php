@@ -44,7 +44,7 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
             echo '<td>' . $value['name'] . ' ' . $value['first_name'] . '</td>';
             echo '<td>' . $value['candidat'] . '</td>';
             echo '<td>' . $validation . '</td>';
-            echo '<td>' . $points . '</td>';
+            echo '<td>' . $points .'/20'. '</td>';
             echo "</tr>";
         }
         ?>
