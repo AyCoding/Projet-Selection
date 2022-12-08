@@ -15,7 +15,21 @@ if (isset($_POST['submit'])) {
     $LM = $_POST['LM'];
     $Remarque = $_POST['Remarque'];
 
-    $sql = "INSERT INTO `evaluation` (`candidat`, `name`, `first_name`, `Bac`, `Travail`, `Absence`, `Comportement`, `EtudeSUP`, `AvisPP`, `AvisProviseur`, `LM`, `Remarque`) VALUES ('$candidat','$name','$first_name','$Bac','$Travail','$Absence','$Comportement','$EtudeSUP','$AvisPP','$AvisProviseur','$LM','{$Remarque}')";
+    $sql = "INSERT INTO `evaluation` (`candidat`, `name`, `first_name`, `Bac`, `Travail`, `Absence`, `Comportement`, `EtudeSUP`, `AvisPP`, `AvisProviseur`, `LM`, `Remarque`) 
+            VALUES (:candidat,:name,:first_name,:Bac,:Travail,:Absence,:Comportement,:EtudeSUP,:AvisPP,:AvisProviseur,:LM,:Remarque)";
     $result = $db->prepare($sql);
-    $result->execute();
+    $result->execute([
+        ':candidat' => $candidat,
+        ':name' => $name,
+        ':first_name' => $first_name,
+        ':Bac' => $Bac,
+        ':Travail' => $Travail,
+        ':Absence' => $Absence,
+        ':Comportement' => $Comportement,
+        ':EtudeSUP' => $EtudeSUP,
+        ':AvisPP' => $AvisPP,
+        ':AvisProviseur' => $AvisProviseur,
+        ':LM' => $LM,
+        ':Remarque' => $Remarque
+    ]);
 }

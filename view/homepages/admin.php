@@ -31,7 +31,7 @@ $_SESSION['LOGGED_ROLE'] = 'admin';
             echo "<tr>";
             echo '<td>' . $value['pseudo'] . '</td>';
             echo '<td>' . $value['role'] . '</td>';
-            echo "<td><a href='modif.php?id={$value['id']}&pseudo={$value['pseudo']}&password={$value['password']}&role={$value['role']}'>Modifier</a></td>";
+            echo "<td><a href='modif.php?id={$value['id']}&pseudo={$value['pseudo']}&role={$value['role']}'>Modifier</a></td>";
             echo "<td><a href='delete.php?id={$value['id']}'>Supprimer</a></td>";
             echo "</tr>";
         }

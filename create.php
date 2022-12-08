@@ -18,7 +18,6 @@ include "controller/create-user.php";
 <form action="" method="POST">
     <input type="text" name="pseudo" placeholder="nom d'utilisateur">
     <input type="password" name="password" placeholder="password">
-<!--    <input type="text" name="role" placeholder="secretaire,evaluateur,admin">-->
     <SELECT name="role" size="1">
         <OPTION>evaluateur
         <OPTION>secretaire

@@ -10,12 +10,13 @@ if (isset($_GET['id'])) {
         $role = $_POST['role'];
 
         // Mise à jour des utilisateurs et leurs rôle
-        $sql = "UPDATE `users` SET `pseudo`= :pseudo, `password` = :password,`role`= :role WHERE `id`= '$id'";
+        $sql = "UPDATE `users` SET `pseudo`= :pseudo, `password` = :password,`role`= :role WHERE `id`= :id";
         $result = $db->prepare($sql);
         $result->execute([
             ':pseudo' => $pseudo,
             ':password' => hash('sha256', $password),
-            ':role' => $role
+            ':role' => $role,
+            ':id'=>$id
         ]);
         header('location: /');
     }

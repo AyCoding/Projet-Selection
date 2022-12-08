@@ -11,23 +11,24 @@ if (isset($_POST['submit'])) {
     $username = $_POST['pseudo'];
     $password = $_POST['password'];
 
-    // On récupère dans la table "user" tout les utilisateurs et les mots de passe
+    // On récupère dans la table "user" tout les utilisateurs
     $sql = "SELECT * FROM `users` WHERE pseudo = :pseudo";
 
     // On prépare la lecture de BDD
     $result = $db->prepare($sql);
     $result->execute([
         ':pseudo' => $username,
-//        'password' => $password
     ]);
 
-    // Récuperer la ligne
 
     if ($result->rowCount() > 0) {
+        // Récuperer toutes la BDD "users"
         $data = $result->fetchAll();
 
+        // Vérification du mot de passe hashé avec celui qui à été saisie
         if (hash('sha256', $password) == $data[0]['password']) {
-            echo "GOOD !";
+
+            // SESSION SET
             $_SESSION['LOGGED_USER'] = $data[0]['pseudo'];
             $_SESSION['LOGGED_ROLE'] = $data[0]['role'];
             $_SESSION['CONNECTED'] = true;

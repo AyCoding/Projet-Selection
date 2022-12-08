@@ -1,4 +1,4 @@
-"Nom";"Prénom";"Numéro candidat";"Points";
+"Nom";"Prénom";"Numéro candidat";"Avis";"Points";
 <?php
 include "../db/database.php";
 
@@ -21,10 +21,11 @@ foreach ($data as $value) {
     } else {
         $validation = "Refusé !";
     }
-    echo '"' . $value['name'] . '";"' . $value['first_name'] . '";"' . $value['candidat'] . '";"' . $points . '/20' . '"' . "\n";
+    echo '"' . $value['name'] . '";"' . $value['first_name'] . '";"' . $value['candidat'] . '";"' . $validation . '";"' . $points . '/20' . '"' . "\n";
 }
-
-
+// Quel type de contenue
 header('Content-Type: text/csv');
-header('Content-Disposition: attachment; filename=""Notes.csv')
+
+// Extraction des notes
+header('Content-Disposition: attachment; filename="Notes.csv"')
 ?>

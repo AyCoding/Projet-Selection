@@ -15,6 +15,10 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+DROP DATABASE IF EXISTS selection;
+CREATE DATABASE selection;
+USE selection;
+
 --
 -- Table structure for table `evaluation`
 --
@@ -37,7 +41,7 @@ CREATE TABLE `evaluation` (
   `LM` varchar(50) NOT NULL,
   `Remarque` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +50,7 @@ CREATE TABLE `evaluation` (
 
 LOCK TABLES `evaluation` WRITE;
 /*!40000 ALTER TABLE `evaluation` DISABLE KEYS */;
-INSERT INTO `evaluation` VALUES (16,27543399,'DE LANGE','Aymeric','PRO','Oui','Oui','Oui','Oui','B','B','B','Avis'),(17,12345,'GEMLATUNE','Roulio','PRO','Oui','Non','Non','Oui','B','B','B','GOOD !');
+INSERT INTO `evaluation` VALUES (16,27543399,'DE LANGE','Aymeric','PRO','Oui','Oui','Oui','Oui','B','B','B','Avis'),(17,12345,'GEMLATUNE','Roulio','PRO','Oui','Non','Non','Oui','B','B','B','GOOD !'),(18,52743,'TEPASNET','Net','Autres','Oui','Non','Non','Oui','B','AB','Insuf.','GOOD !');
 /*!40000 ALTER TABLE `evaluation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +67,7 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +76,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user1','pass','evaluateur'),(2,'user2','pass','secretaire'),(3,'user3','pass','admin'),(9,'sebastien.p08','pass','admin'),(11,'delange.a12','pass','admin');
+INSERT INTO `users` VALUES (1,'user1','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1','evaluateur'),(2,'user2','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1','secretaire'),(3,'user3','d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1','admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -85,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-08  9:52:14
+-- Dump completed on 2022-12-08 14:59:54
