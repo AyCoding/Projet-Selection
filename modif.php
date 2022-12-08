@@ -20,7 +20,7 @@ include "controller/modif-user.php";
     if (isset($_GET['pseudo']) && isset($_GET['role'])) {
 
         echo "<input type='text' name='pseudo' placeholder='pseudo' value=" . $_GET['pseudo'] . ">";
-//        echo "<input type='text' name='role' placeholder='role' value=" . $_GET['role'] . ">";
+        echo "<input type='password' name='password' placeholder='role' value=" . $_GET['password'] . ">";
         echo '<SELECT name="role" size="1">';
 
         switch ($_GET['role']) {

@@ -15,14 +15,10 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
-DROP DATABASE IF EXISTS selection;
-CREATE DATABASE selection;
-USE selection;
-
 --
 -- Table structure for table `evaluation`
 --
+
 DROP TABLE IF EXISTS `evaluation`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -41,9 +37,18 @@ CREATE TABLE `evaluation` (
   `LM` varchar(50) NOT NULL,
   `Remarque` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `evaluation`
+--
+
+LOCK TABLES `evaluation` WRITE;
+/*!40000 ALTER TABLE `evaluation` DISABLE KEYS */;
+INSERT INTO `evaluation` VALUES (16,27543399,'DE LANGE','Aymeric','PRO','Oui','Oui','Oui','Oui','B','B','B','Avis'),(17,12345,'GEMLATUNE','Roulio','PRO','Oui','Non','Non','Oui','B','B','B','GOOD !');
+/*!40000 ALTER TABLE `evaluation` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -58,7 +63,7 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `role` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +72,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'user1','pass','evaluateur'),(2,'user2','pass','secretaire'),(3,'user3','pass','admin'),(9,'sebastien.p25','pass','admin');
+INSERT INTO `users` VALUES (1,'user1','pass','evaluateur'),(2,'user2','pass','secretaire'),(3,'user3','pass','admin'),(9,'sebastien.p08','pass','admin'),(11,'delange.a12','pass','admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-06  8:33:17
+-- Dump completed on 2022-12-08  9:52:14
