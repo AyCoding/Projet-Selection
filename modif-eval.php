@@ -19,9 +19,23 @@ if (isset($_GET['id'])) {
         $Remarque = $_POST['Remarque'];
 
         // Mise à jour des utilisateurs et leurs rôle
-        $sql = "UPDATE `evaluation` SET `candidat`= '$candidat',`name`= '$name', `first_name` = '$first_name', `Bac` = '$Bac', `Travail` = '$Travail', `Absence` = '$Absence', `Comportement` = '$Comportement', `EtudeSUP` = '$Comportement', `AvisPP` = '$AvisPP', `AvisProviseur` = '$AvisProviseur', `LM` = '$LM', `Remarque` = '$Remarque' WHERE `id`= '$id'";
+        $sql = "UPDATE `evaluation` SET `candidat`= :candidat,`name`= :name, `first_name` = :first_name, `Bac` = :Bac, `Travail` = :Travail, `Absence` = :Absence, `Comportement` = :Comportement, `EtudeSUP` = :EtudeSUP, `AvisPP` = :AvisPP, `AvisProviseur` = :AvisProviseur, `LM` = :LM, `Remarque` = :Remarque WHERE `id`= :id";
         $result = $db->prepare($sql);
-        $result->execute();
+        $result->execute([
+            ':candidat' => $candidat,
+            ':name' => $name,
+            ':first_name' => $first_name,
+            ':Bac' => $Bac,
+            ':Travail' => $Travail,
+            ':Absence' => $Absence,
+            ':Comportement' => $Comportement,
+            ':EtudeSUP' => $EtudeSUP,
+            ':AvisPP' => $AvisPP,
+            ':AvisProviseur' => $AvisProviseur,
+            ':LM' => $LM,
+            ':Remarque' => $Remarque,
+            ':id' => $id
+        ]);
         header('location: grille.php');
     }
 }

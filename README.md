@@ -11,3 +11,15 @@ Puis, il faut de nouveau manuellement rendre les résultats dans un tableau num�
 - MySQL
 - HTML
 - SCSS
+
+### Les fonctionnalités disponibles :
+* Un portail d'identification
+
+-   Un espace pour les évaluateurs
+    -   Remplir des grilles d'évaluation
+    -   Modifier ses grilles
+    -   Voir le classement
+-   Un espace pour les secrétaires
+    -   Voir et télécharger le classement au format csv
+-   Un espace pour l'administrateur
+    -   Créer / modifier / supprimer des comptes
