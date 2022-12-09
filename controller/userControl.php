@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['pseudo'];
     $password = $_POST['password'];
 
-    // On récupère dans la table "user" tout les utilisateurs
+    // On récupère dans la table "user" tous les utilisateurs
     $sql = "SELECT * FROM `users` WHERE pseudo = :pseudo";
 
     // On prépare la lecture de BDD
@@ -22,10 +22,10 @@ if (isset($_POST['submit'])) {
 
 
     if ($result->rowCount() > 0) {
-        // Récuperer toutes la BDD "users"
+        // Récuperer toutes la table "users"
         $data = $result->fetchAll();
 
-        // Vérification du mot de passe hashé avec celui qui à été saisie
+        // Vérification du mot de passe hashé avec celui qui a été saisie
         if (hash('sha256', $password) == $data[0]['password']) {
 
             // SESSION SET

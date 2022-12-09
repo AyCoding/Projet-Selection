@@ -14,7 +14,7 @@ $_SESSION['LOGGED_ROLE'] = 'evaluateur';
 <?php include("view/header.php"); ?>
 
 <main>
-    <h1 class="title">Espaces évalutateurs</h1>
+    <h1 class="title">Espaces évaluateurs</h1>
 
     <section class="grid">
         <form action="grille.php" method="POST" class="form-group">
@@ -72,7 +72,7 @@ $_SESSION['LOGGED_ROLE'] = 'evaluateur';
                 <input type="radio" name="Absence" style="width: auto;" value="Non" required>
             </div>
             <!---->
-            <h4>Attidue/Comportement</h4>
+            <h4>Attitude/Comportement</h4>
             <div class="form-item radio" style=" display:flex;gap: 32px">
                 <label for="">Oui</label>
                 <input type="radio" name="Comportement" style="width: auto;" value="Oui" required>

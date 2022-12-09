@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
         $password = $_POST['password'];
         $role = $_POST['role'];
 
-        // Mise à jour des utilisateurs et leurs rôle
+        // Mise à jour des utilisateurs et leurs rôles
         $sql = "UPDATE `users` SET `pseudo`= :pseudo, `password` = :password,`role`= :role WHERE `id`= :id";
         $result = $db->prepare($sql);
         $result->execute([

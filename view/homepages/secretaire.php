@@ -2,14 +2,14 @@
 
 include "db/database.php";
 
-// On récupère dans la table "user" tout les utilisateurs et les mots de passe
+// On récupère dans la table "user" tous les utilisateurs et les mots de passe
 $sql = "SELECT * FROM `evaluation`";
 
 // On prépare la lecture de BDD
 $result = $db->prepare($sql);
 $result->execute();
 
-// Récuperer la ligne
+// Récupération de toutes la table "évaluation"
 $data_secretaire = $result->fetchAll();
 $_SESSION['LOGGED_ROLE'] = 'secretaire';
 ?>

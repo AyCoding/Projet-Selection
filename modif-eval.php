@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
         $LM = $_POST['LM'];
         $Remarque = $_POST['Remarque'];
 
-        // Mise à jour des utilisateurs et leurs rôle
+        // Mise à jour des utilisateurs et leurs rôles
         $sql = "UPDATE `evaluation` SET `candidat`= :candidat,`name`= :name, `first_name` = :first_name, `Bac` = :Bac, `Travail` = :Travail, `Absence` = :Absence, `Comportement` = :Comportement, `EtudeSUP` = :EtudeSUP, `AvisPP` = :AvisPP, `AvisProviseur` = :AvisProviseur, `LM` = :LM, `Remarque` = :Remarque WHERE `id`= :id";
         $result = $db->prepare($sql);
         $result->execute([

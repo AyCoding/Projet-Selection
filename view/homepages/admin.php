@@ -1,14 +1,14 @@
 <?php
 include "db/database.php";
 
-// On récupère dans la table "user" tout les utilisateurs et les mots de passe
+// On récupère dans la table "user" tous les utilisateurs et les mots de passe
 $sql = "SELECT * FROM `users`";
 
 // On prépare la lecture de BDD
 $result = $db->prepare($sql);
 $result->execute();
 
-// Récuperer la ligne
+// Récupérer la ligne
 $data_admin = $result->fetchAll();
 $_SESSION['LOGGED_ROLE'] = 'admin';
 ?>
@@ -16,7 +16,7 @@ $_SESSION['LOGGED_ROLE'] = 'admin';
 
 <main>
 
-    <h1 class="title">Espaces admininastreurs</h1>
+    <h1 class="title">Espaces administrateurs</h1>
 
     <table>
         <thead>
