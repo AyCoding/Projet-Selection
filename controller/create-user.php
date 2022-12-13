@@ -16,5 +16,5 @@ if (isset($_POST['submit'])) {
         ':password' => hash('sha256', $pass),
         ':role' => $role
     ]);
-    header('location: index.php');
+    header('location: ./');
 }

@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['LOGGED_USER'] = $data['pseudo'];
             $_SESSION['LOGGED_ROLE'] = $data['role'];
             $_SESSION['CONNECTED'] = true;
-            header('location: index.php');
+            header('location: ./');
             exit();
 
         }

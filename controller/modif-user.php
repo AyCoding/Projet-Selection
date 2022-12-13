@@ -18,6 +18,6 @@ if (isset($_GET['id'])) {
             ':role' => $role,
             ':id'=>$id
         ]);
-        header('location: ../index.php');
+        header('location: ./');
     }
 }
