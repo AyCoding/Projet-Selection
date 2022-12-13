@@ -1,6 +1,10 @@
 <?php
 include "controller/controlEval.php";
 include "db/database.php";
+include "controller/auth.php";
+
+Connecte();
+Forcer_connexion();
 
 // On récupère dans la table "user" tous les utilisateurs et les mots de passe
 $sql = "SELECT * FROM `evaluation`";

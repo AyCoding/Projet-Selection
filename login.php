@@ -32,9 +32,6 @@ include "controller/userControl.php";
                 ?>
             </div>
         </form>
-        <a href="https://www.figma.com/file/ycL184J0G5BrAiWF5rMMkn/SIO1---Selection-1?node-id=4%3A2" target="_blank">
-            Lien maquette figma
-        </a>
     </div>
 </section>
 </body>
