@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="src/css/style.css">
 <header>
     <div class="logo">
-        <a href="/controller/logout.php">Déconnexion</a>
+        <a href="controller/logout.php">Déconnexion</a>
     </div>
     <nav>
         <?php

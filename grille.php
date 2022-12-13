@@ -32,7 +32,7 @@ $data = $result->fetchAll();
 
 <header>
     <div class="logo">
-        <a href="/controller/logout.php">Déconnexion</a>
+        <a href="controller/logout.php">Déconnexion</a>
     </div>
     <nav>
         <a href="index.php">Espaces évaluateurs</a>
