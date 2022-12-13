@@ -3,4 +3,4 @@
 
 session_start();
 unset($_SESSION['CONNECTED']);
-header('Location: /');
+header('Location: ../login.php');

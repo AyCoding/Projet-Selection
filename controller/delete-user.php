@@ -7,6 +7,6 @@ if (isset($_GET['id'])) {
         $sql = "DELETE FROM `users` WHERE `users`.`id` = {$_GET['id']}";
         $result = $db->prepare($sql);
         $result->execute();
-        header('location: /');
+        header('location: ../index.php');
     }
 }

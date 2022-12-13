@@ -23,16 +23,16 @@ if (isset($_POST['submit'])) {
 
     if ($result->rowCount() > 0) {
         // Récuperer toutes la table "users"
-        $data = $result->fetchAll();
+        $data = $result->fetch();
 
         // Vérification du mot de passe hashé avec celui qui a été saisie
-        if (hash('sha256', $password) == $data[0]['password']) {
+        if (hash('sha256', $password) == $data['password']) {
 
             // SESSION SET
-            $_SESSION['LOGGED_USER'] = $data[0]['pseudo'];
-            $_SESSION['LOGGED_ROLE'] = $data[0]['role'];
+            $_SESSION['LOGGED_USER'] = $data['pseudo'];
+            $_SESSION['LOGGED_ROLE'] = $data['role'];
             $_SESSION['CONNECTED'] = true;
-            header('location: /');
+            header('location: index.php');
             exit();
 
         } else {
