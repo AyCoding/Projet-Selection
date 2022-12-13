@@ -8,16 +8,22 @@ $sql = "SELECT * FROM `users`";
 $result = $db->prepare($sql);
 $result->execute();
 
-// Récupérer la ligne
+// Récupérer toutes la table "users"
 $data_admin = $result->fetchAll();
-$_SESSION['LOGGED_ROLE'] = 'admin';
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Espaces administrateurs</title>
+</head>
+<body>
 <?php include("view/header.php"); ?>
-
 <main>
-
     <h1 class="title">Espaces administrateurs</h1>
-
     <table>
         <thead>
         <tr>

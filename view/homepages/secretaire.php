@@ -1,5 +1,4 @@
 <?php
-
 include "db/database.php";
 
 // On récupère dans la table "user" tous les utilisateurs et les mots de passe
@@ -11,8 +10,17 @@ $result->execute();
 
 // Récupération de toutes la table "évaluation"
 $data_secretaire = $result->fetchAll();
-$_SESSION['LOGGED_ROLE'] = 'secretaire';
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Espaces secrétaires</title>
+</head>
+<body>
 <?php include "view/header.php"; ?>
 <main>
     <h1 class="title">Espaces secrétaires</h1>
@@ -44,7 +52,7 @@ $_SESSION['LOGGED_ROLE'] = 'secretaire';
             echo '<td>' . $value['name'] . ' ' . $value['first_name'] . '</td>';
             echo '<td>' . $value['candidat'] . '</td>';
             echo '<td>' . $validation . '</td>';
-            echo '<td>' . $points .'/20'. '</td>';
+            echo '<td>' . $points . '/20' . '</td>';
             echo "</tr>";
         }
         ?>

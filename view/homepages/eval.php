@@ -1,6 +1,3 @@
-<?php
-$_SESSION['LOGGED_ROLE'] = 'evaluateur';
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +9,6 @@ $_SESSION['LOGGED_ROLE'] = 'evaluateur';
 </head>
 <body>
 <?php include("view/header.php"); ?>
-
 <main>
     <h1 class="title">Espaces évaluateurs</h1>
 

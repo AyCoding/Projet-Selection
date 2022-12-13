@@ -31,7 +31,7 @@ $data = $result->fetchAll();
         <a href="/controller/logout.php">Déconnexion</a>
     </div>
     <nav>
-        <a href="/">Espaces évaluateurs</a>
+        <a href="index.php">Espaces évaluateurs</a>
         <a href="grille.php">Mes grilles</a>
     </nav>
 </header>

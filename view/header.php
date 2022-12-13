@@ -7,16 +7,16 @@
         <?php
         switch ($_SESSION['LOGGED_ROLE']) {
             case 'evaluateur':
-                echo '<a href="#">Espaces évaluateurs</a>';
+                echo '<a href="index.php">Espaces évaluateurs</a>';
                 echo '<a href="grille.php">Mes grilles</a>';
                 break;
 
             case 'secretaire':
-                echo '<a href="#">Espaces secrétaires</a>';
+                echo '<a href="index.php">Espaces secrétaires</a>';
                 break;
 
             case 'admin';
-                echo '<a href="#">Espaces administrateurs</a>';
+                echo '<a href="index.php">Espaces administrateurs</a>';
                 break;
         }
         ?>
