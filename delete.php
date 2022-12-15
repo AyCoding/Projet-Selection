@@ -41,19 +41,6 @@ include "controller/delete-user.php";
         gap: 10px;
     }
 
-    /*form input, a {*/
-    /*    padding: 10px 30px;*/
-    /*    border: none;*/
-    /*    cursor: pointer;*/
-    /*    background: #333;*/
-    /*    color: #FFF;*/
-    /*    border-radius: 4px;*/
-    /*    max-width: 90%;*/
-    /*    width: 200px;*/
-    /*    text-align: center;*/
-    /*    font-size: 16px;*/
-    /*}*/
-
     form input, a {
         padding: 10px 30px;
         border: none;
