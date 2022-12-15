@@ -16,8 +16,17 @@ include "controller/delete-user.php";
 <h1>Confirmation de la suppression</h1>
 
 <form action="" method="POST">
-    <input type="submit" name="submit" value="Acceptez">
+    <?php
+    if (isset($error)) {
+        echo '<h2>' . $error . '</h2>';
+        echo '<a href="./">Retour</a>';
+    } else {
+        echo '<input type="submit" name="submit" value="Acceptez">';
+        echo '<a href="./">Retour</a>';
+    }
+    ?>
 </form>
+
 
 </body>
 </html>
@@ -28,16 +37,32 @@ include "controller/delete-user.php";
 
     form {
         display: flex;
+        flex-direction: column;
         gap: 10px;
     }
 
-    form input {
+    /*form input, a {*/
+    /*    padding: 10px 30px;*/
+    /*    border: none;*/
+    /*    cursor: pointer;*/
+    /*    background: #333;*/
+    /*    color: #FFF;*/
+    /*    border-radius: 4px;*/
+    /*    max-width: 90%;*/
+    /*    width: 200px;*/
+    /*    text-align: center;*/
+    /*    font-size: 16px;*/
+    /*}*/
+
+    form input, a {
         padding: 10px 30px;
         border: none;
         cursor: pointer;
         background: #333;
         color: #FFF;
         border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
     }
 
     form input:hover {

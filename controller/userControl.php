@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
         if (hash('sha256', $password) == $data['password']) {
 
             // SESSION SET
+            $_SESSION['id'] = $data['id'];
             $_SESSION['LOGGED_USER'] = $data['pseudo'];
             $_SESSION['LOGGED_ROLE'] = $data['role'];
             $_SESSION['CONNECTED'] = true;
